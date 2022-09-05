@@ -11,7 +11,7 @@ export class AuthService {
   public avail: boolean = false;
   public msg: string = "";
   public count :any;
-  private baseUri: string = "https://foodiefyja.herokuapp.com/login";
+  private baseUri: string = "https://foodiefyja.herokuapp.com/";
   // private baseUri: string = "http://localhost:3000";
   // private headers = new HttpHeaders().set('Content-Type', 'application/json');
   constructor(private http: HttpClient, private router: Router) {
@@ -49,11 +49,11 @@ export class AuthService {
   }
 
   check() {
-    return this.http.get(this.baseUri + "check", { });
+    return this.http.get(this.baseUri + "/check", { });
   }
 
   reset(body: any) {
-    return this.http.post(this.baseUri+'reset', body, {
+    return this.http.post(this.baseUri+'/reset', body, {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });
@@ -61,14 +61,14 @@ export class AuthService {
 
   resetpassworddone(body: any) {
 
-    return this.http.post(this.baseUri+'reset-password-done', body, {
+    return this.http.post(this.baseUri+'/reset-password-done', body, {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });
   }
 
   changepassword(body: any) {
-    return this.http.post( this.baseUri+'change-password', body, {
+    return this.http.post( this.baseUri+'/change-password', body, {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });
