@@ -19,14 +19,14 @@ export class AuthService {
   }
 
   register(body: any) {
-    return this.http.post(this.baseUri+'register', body, {
+    return this.http.post(this.baseUri+'/register', body, {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });
   }
 
   login(body: any) {
-    return this.http.post(this.baseUri+'login', body, {
+    return this.http.post(this.baseUri+'/login', body, {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });
