@@ -14,7 +14,9 @@ export class AuthService {
   private baseUri: string = environment.url;
   // private baseUri: string = "http://localhost:3000";
   private headers = new HttpHeaders().set('Content-Type', 'application/json');
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router) {
+    console.log(environment.url)
+  }
 
   register(body: any) {
     return this.http.post(this.baseUri+'register', body, {
