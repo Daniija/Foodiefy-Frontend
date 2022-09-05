@@ -12,11 +12,11 @@ export class UserService {
   public orderid:any;
   private baseUri: string = environment.url+"/user/";
   // private baseUri: string = "http://localhost:3000/user/";
-  private headers = new HttpHeaders().set('Content-Type', 'application/json');
+  // private headers = new HttpHeaders().set('Content-Type', 'application/json');
   constructor(private http: HttpClient, private router: Router) { }
 
   myprofile() {
-    return this.http.get(this.baseUri + "myprofile", { headers: this.headers });
+    return this.http.get(this.baseUri + "myprofile", { });
   }
 
   editprofile(body: any) {
@@ -27,7 +27,7 @@ export class UserService {
   }
 
   getAllFood() {
-    return this.http.get(this.baseUri + "getallfooditem", { headers: this.headers });
+    return this.http.get(this.baseUri + "getallfooditem", {  });
   }
 
   addtocart(body: any) {
@@ -39,12 +39,12 @@ export class UserService {
 
   getCount()
   {
-    return this.http.get(this.baseUri + "getcount", { headers: this.headers });
+    return this.http.get(this.baseUri + "getcount", {  });
   }
 
   getcart()
   {
-    return this.http.get(this.baseUri + "getcart", { headers: this.headers });
+    return this.http.get(this.baseUri + "getcart", {  });
   }
 
   deleteFromCart(body: any)
@@ -73,7 +73,7 @@ export class UserService {
 
 
   getAllOrder() {
-    return this.http.get(this.baseUri + "getalluserorders", { headers: this.headers });
+    return this.http.get(this.baseUri + "getalluserorders", {  });
   }
 
   setOrderid(id: any)
@@ -88,7 +88,7 @@ export class UserService {
 
   getOneOrder(id: any)
   {
-    return this.http.get(this.baseUri + "getoneorder/" + id, { headers: this.headers });
+    return this.http.get(this.baseUri + "getoneorder/" + id, {  });
   }
 
   feedback(body: any) {

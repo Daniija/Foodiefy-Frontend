@@ -5,7 +5,9 @@
 export const environment = {
   production: false,
   heroku :true,
-  url: 'https://foodiefyja.herokuapp.com'
+  url: 'http://localhost:3000'
+  // url: 'https://foodiefyja.herokuapp.com'
+
 };
 
 /*
