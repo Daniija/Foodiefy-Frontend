@@ -17,7 +17,7 @@
               "socket.io-client",
               "jquery"
               ],
-            "outputPath": "dist/canteen",
+            "outputPath": "dist/foodiefy",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
