@@ -17,14 +17,14 @@ export class AuthService {
   constructor(private http: HttpClient, private router: Router) { }
 
   register(body: any) {
-    return this.http.post(this.baseUri+'/register', body, {
+    return this.http.post(this.baseUri+'register', body, {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });
   }
 
   login(body: any) {
-    return this.http.post(this.baseUri+'/login', body, {
+    return this.http.post(this.baseUri+'login', body, {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });
@@ -47,11 +47,11 @@ export class AuthService {
   }
 
   check() {
-    return this.http.get(this.baseUri + "/check", { headers: this.headers });
+    return this.http.get(this.baseUri + "check", { headers: this.headers });
   }
 
   reset(body: any) {
-    return this.http.post(this.baseUri+'/reset', body, {
+    return this.http.post(this.baseUri+'reset', body, {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });
@@ -59,14 +59,14 @@ export class AuthService {
 
   resetpassworddone(body: any) {
 
-    return this.http.post(this.baseUri+'/reset-password-done', body, {
+    return this.http.post(this.baseUri+'reset-password-done', body, {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });
   }
 
   changepassword(body: any) {
-    return this.http.post( this.baseUri+'/change-password', body, {
+    return this.http.post( this.baseUri+'change-password', body, {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });
