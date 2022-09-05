@@ -13,7 +13,7 @@ export class AdminService {
   public userid:any;
   private food: any;
   public qrcode:any;
-  private baseUri: string = environment.url+"/admin/";
+  private baseUri: string = "https://foodiefyja.herokuapp.com/admin/";
 
   private headers = new HttpHeaders().set('Content-Type', 'application/json');
   constructor(private http: HttpClient, private router: Router) { }

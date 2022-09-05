@@ -11,7 +11,7 @@ export class WebsocketService {
 
 
   // readonly url: string = "http://localhost:3000";
-  readonly url: string = environment.url+'/';
+  readonly url: string = "https://foodiefyja.herokuapp.com/";
   constructor() {
     this.socket = io(this.url);
   }
