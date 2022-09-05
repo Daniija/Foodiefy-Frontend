@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  heroku :true
+  heroku :true,
+  url: 'http://localhost:3000'
 };
 
 /*
