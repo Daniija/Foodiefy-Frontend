@@ -45,7 +45,7 @@ export class ChangePasswordComponent implements OnInit {
     }
 
     if (f.controls.p1.value != f.controls.p2.value) {
-      this.msg = "Password doesn't match";
+      this.msg = "Password doesn't match!!";
       this.avail = true;
       return;
     }
