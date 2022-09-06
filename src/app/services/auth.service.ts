@@ -49,7 +49,7 @@ export class AuthService {
   }
 
   check() {
-    return this.http.get(this.baseUri + "check", { });
+    return this.http.get(this.baseUri + "/check", { });
   }
 
   reset(body: any) {
@@ -61,14 +61,14 @@ export class AuthService {
 
   resetpassworddone(body: any) {
 
-    return this.http.post(this.baseUri+'reset-password-done', body, {
+    return this.http.post(this.baseUri+'/reset-password-done', body, {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });
   }
 
   changepassword(body: any) {
-    return this.http.post( this.baseUri+'change-password', body, {
+    return this.http.post( this.baseUri+'/change-password', body, {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });
