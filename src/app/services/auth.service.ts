@@ -53,7 +53,7 @@ export class AuthService {
   }
 
   reset(body: any) {
-    return this.http.post(this.baseUri+'reset', body, {
+    return this.http.post(this.baseUri+'/reset', body, {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });
