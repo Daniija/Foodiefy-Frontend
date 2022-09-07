@@ -87,7 +87,7 @@ export class AddfoodComponent implements OnInit {
 
   }
 
-  selectImage(event) {
+  selectImage(event: any) {
     // console.log("image selected");
     if (event.target.files.length > 0) {
       const file = event.target.files[0];
@@ -95,14 +95,14 @@ export class AddfoodComponent implements OnInit {
     }
   }
 
-  qtychnage(event) {
+  qtychnage(event: any) {
     if (event.target.value < -1) {
       event.target.value= 0;
       this.foodqty=0;
     }
   }
 
-  pricechnage(event) {
+  pricechnage(event: any) {
     if(event.target.value == "")
     {
       event.target.value= "";

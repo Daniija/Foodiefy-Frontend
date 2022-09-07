@@ -12,7 +12,7 @@ export class UserService {
   public orderid:any;
   private baseUri: string = environment.url+"/user/";
   // private baseUri: string = "http://localhost:3000/user/";
-  // private headers = new HttpHeaders().set('Content-Type', 'application/json');
+  private headers = new HttpHeaders().set('Content-Type', 'application/json');
   constructor(private http: HttpClient, private router: Router) { }
 
   myprofile() {
@@ -54,14 +54,6 @@ export class UserService {
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });
   }
-
-
-  // paytm(body: any) {
-  //   return this.http.post(this.baseUri+"paytm", body, {
-  //     observe: 'body',
-  //     headers: new HttpHeaders().append('Content-Type', 'application/json')
-  //   });
-  // }
 
 
   placeOrder(body: any) {
