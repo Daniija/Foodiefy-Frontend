@@ -11,7 +11,7 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./addfood.component.css']
 })
 export class AddfoodComponent implements OnInit {
-  image:any;
+  image;
   foodname:any;
   foodprice:any;
   foodqty:any;
@@ -87,7 +87,7 @@ export class AddfoodComponent implements OnInit {
 
   }
 
-  selectImage(event: any) {
+  selectImage(event) {
     // console.log("image selected");
     if (event.target.files.length > 0) {
       const file = event.target.files[0];
@@ -95,14 +95,14 @@ export class AddfoodComponent implements OnInit {
     }
   }
 
-  qtychnage(event: any) {
+  qtychnage(event) {
     if (event.target.value < -1) {
       event.target.value= 0;
       this.foodqty=0;
     }
   }
 
-  pricechnage(event: any) {
+  pricechnage(event) {
     if(event.target.value == "")
     {
       event.target.value= "";
