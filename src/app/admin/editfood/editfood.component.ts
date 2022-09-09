@@ -48,7 +48,7 @@ export class EditfoodComponent implements OnInit {
   // edit() {
 
   // }
-  qtychnage(event) {
+  qtychnage(event: any) {
 
     if (event.target.value < 0) {
       this.food.foodqty = 0;
@@ -56,7 +56,7 @@ export class EditfoodComponent implements OnInit {
     }
   }
 
-  pricechnage(event) {
+  pricechnage(event: any) {
     if (event.target.value == "") {
       event.target.value = "";
       this.food.foodprice = "";
@@ -67,7 +67,7 @@ export class EditfoodComponent implements OnInit {
     }
   }
 
-  onSubmit(f) {
+  onSubmit(f: any) {
     // console.log("submit");
 
     if (f.controls.foodpic.value) {
@@ -159,7 +159,7 @@ export class EditfoodComponent implements OnInit {
   }
 
 
-  selectImage(event) {
+  selectImage(event: any) {
     if (event.target.files.length > 0) {
       const file = event.target.files[0];
       this.image = file;

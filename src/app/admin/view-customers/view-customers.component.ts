@@ -62,7 +62,7 @@ export class ViewCustomersComponent implements OnInit {
   }
 
 
-  block(user) {
+  block(user: any) {
     var userid = user._id;
     this.adminService.blockuser(userid).subscribe(
       data => {
@@ -84,7 +84,7 @@ export class ViewCustomersComponent implements OnInit {
     )
   }
 
-  unblock(user) {
+  unblock(user: any) {
     var userid = user._id;
     this.adminService.unblockuser(userid).subscribe(
       data => {

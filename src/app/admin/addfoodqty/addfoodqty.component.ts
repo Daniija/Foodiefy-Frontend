@@ -51,7 +51,7 @@ export class AddfoodqtyComponent implements OnInit {
     )
   }
 
-  onSubmit(f) {
+  onSubmit(f: any) {
     if(this.food.foodqty<0)
     {
       this.food.foodqty=0;
@@ -77,7 +77,7 @@ export class AddfoodqtyComponent implements OnInit {
       }
     )
   }
-  qtychnage(event) {
+  qtychnage(event: any) {
     if (event.target.value < 0) {
       event.target.value= 0;
       this.food.foodqty = 0;

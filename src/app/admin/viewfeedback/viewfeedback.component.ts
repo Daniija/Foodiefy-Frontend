@@ -80,12 +80,12 @@ export class ViewfeedbackComponent implements OnInit {
     }, 4000);
   }
 
-  viewuser(item) {
+  viewuser(item: any) {
     this.adminService.setUserid(item.userid);
     this.router.navigate(['/admin/viewuser'])
   }
 
-  deletefeedback(item) {
+  deletefeedback(item: any) {
     // //console.log("delete");
     //console.log(item);
     this.loading = true

@@ -47,8 +47,6 @@ export class AdminhomeComponent implements OnInit {
     });
   }
 
-
-
   getOrder() {
     this.adminService.getAllOrder().subscribe(
       data => {
@@ -90,6 +88,7 @@ export class AdminhomeComponent implements OnInit {
       }
     )
   }
+
   setMessage(msg: any, color: any) {
     this.errorMessage = msg;
     this.styl = {
@@ -100,7 +99,7 @@ export class AdminhomeComponent implements OnInit {
     }, 4000);
   }
 
-  changeStatus(newstatus, item) {
+  changeStatus(newstatus: any, item: any) {
     // console.log(item.useremail);
     this.adminService.updateOrderstatus({ id: item._id, status: newstatus, email: item.useremail }).subscribe(
       data => {
@@ -123,7 +122,7 @@ export class AdminhomeComponent implements OnInit {
     )
   }
 
-  deleteorder(item) {
+  deleteorder(item: any) {
     this.loading = true
     this.adminService.deleteOrder(item._id).subscribe(
       data => {
@@ -147,19 +146,19 @@ export class AdminhomeComponent implements OnInit {
     )
   }
 
-  vieworder(item) {
+  vieworder(item: any) {
 
     this.adminService.setOrderid(item._id);
     this.router.navigate(['/admin/vieworder'])
 
   }
 
-  viewuser(item) {
+  viewuser(item: any) {
     this.adminService.setUserid(item.userid);
     this.router.navigate(['/admin/viewuser'])
   }
 
-  changePaymentStatus(newstatus, item) {
+  changePaymentStatus(newstatus: any, item: any) {
     this.adminService.updatePaymentstatus({ id: item._id, paymentstatus: newstatus,email: item.useremail }).subscribe(
       data => {
         if (data['msg']) {
@@ -181,7 +180,7 @@ export class AdminhomeComponent implements OnInit {
     )
   }
 
-  generateQr(item)
+  generateQr(item: any)
   {
     if(item.status=="completed" || item.status=="picked up")
     {
