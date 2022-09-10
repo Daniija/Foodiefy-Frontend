@@ -41,7 +41,7 @@ export class SeefoodComponent implements OnInit {
     this.loading = true;
     if(this.authService.getMessage())
     {
-      var x = this.authService.getMessage();
+      let x = this.authService.getMessage();
       this.setMessage(x.msg,x.color)
       // //console.log(this.authService.getMessage());
     }
@@ -97,7 +97,7 @@ export class SeefoodComponent implements OnInit {
     )
   }
 
-  addfooditem(item) {
+  addfooditem(item: any) {
     // //console.log("add");
     // //console.log(item);
     this.adminService.setFood(item);
@@ -105,10 +105,10 @@ export class SeefoodComponent implements OnInit {
   }
 
 
-  deletefood(item) {
+  deletefood(item: any) {
     // //console.log("delete");
 
-    // //console.log(item);
+    console.log(item);
     this.loading = true
     this.adminService.deleteFood(item._id).subscribe(
       data => {
@@ -123,6 +123,7 @@ export class SeefoodComponent implements OnInit {
       },
       (error) => {
         if (error instanceof HttpErrorResponse) {
+          console.log(error)
           this.authService.logoutUser();
           this.router.navigate(['/error'])
         }
@@ -131,7 +132,7 @@ export class SeefoodComponent implements OnInit {
     )
   }
 
-  editfood(item) {
+  editfood(item: any) {
     // //console.log("edit");
     this.adminService.setFood(item);
     this.router.navigate(['/admin/editfood'])
