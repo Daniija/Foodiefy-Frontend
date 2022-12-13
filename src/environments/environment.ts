@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  heroku :true,
-  url: 'https://foodiefyja.herokuapp.com'
+  url: 'https://foodiefy-server.vercel.app'
   // url: 'https://foodiefyja.herokuapp.com'
 
 };
