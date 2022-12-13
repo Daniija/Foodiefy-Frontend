@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
   heroku: true,
-  url: 'https://foodiefyja.herokuapp.com/'
+  url: 'https://foodiefy-server.vercel.app'
 };
